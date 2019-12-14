@@ -47,7 +47,7 @@ public class AlarmService extends Service {
         //Intent in = new Intent(this, AlarmActivity.class);
         intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
-        intent1.putExtra("Time2",intent.getExtras().getString("Time1"));       //찾아야해...
+        intent1.putExtra("Time2",intent.getExtras().getString("Time1"));
         startActivity(intent1);
 
         Log.d("AlarmService", "Alarm");
@@ -57,7 +57,7 @@ public class AlarmService extends Service {
         }
 
         stopSelf();
-
+        Log.d("ODH","Service");
         return START_NOT_STICKY;
     }
 

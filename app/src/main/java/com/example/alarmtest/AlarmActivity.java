@@ -5,17 +5,16 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 //import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 
 
 public class AlarmActivity extends AppCompatActivity {
 
     private MediaPlayer mediaPlayer;
-   TextView text;
+    TextView text;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +29,9 @@ public class AlarmActivity extends AppCompatActivity {
         this.mediaPlayer.start();
 
         findViewById(R.id.btnClose).setOnClickListener(mClickListener);
+
     }
+
 
     @Override
     protected void onDestroy() {
